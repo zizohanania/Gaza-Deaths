@@ -1,0 +1,57 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;  /* Disable horizontal scroll */
+    height: 100vh;  /* Set the body height to 100% of the viewport */
+}
+
+.scroll-container {
+    position: relative;
+    height: 100%; /* Take up the full viewport height */
+    overflow-y: scroll; /* Allow scrolling of dots */
+    width: 100%;
+}
+
+canvas {
+    display: block; /* Make canvas a block-level element */
+    width: 100%;
+}
+
+.text-container {
+    position: fixed;
+    bottom: 0; /* Keep the text at the bottom of the screen */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Darker background */
+    padding: 20px 10px;
+    text-align: center;
+    z-index: 10;  /* Ensure the text is on top of the dots */
+    box-sizing: border-box; /* Prevents padding from affecting layout */
+}
+
+.blood-text {
+    font-size: 48px;  /* Larger text */
+    font-weight: bold;
+    color: red;
+    text-shadow: 
+        2px 2px 0 rgba(0, 0, 0, 0.7),  /* Right and bottom shadow */
+        -2px -2px 0 rgba(0, 0, 0, 0.7), /* Left and top shadow */
+        2px -2px 0 rgba(0, 0, 0, 0.7),  /* Left and top shadow */
+        -2px 2px 0 rgba(0, 0, 0, 0.7);  /* Right and bottom shadow */
+}
+
+.subtext {
+    margin-top: 10px;
+    font-size: 22px;  /* Larger subtext */
+    color: #fff;
+    text-shadow: 
+        1px 1px 0 rgba(0, 0, 0, 0.7),   /* Right and bottom shadow */
+        -1px -1px 0 rgba(0, 0, 0, 0.7),  /* Left and top shadow */
+        1px -1px 0 rgba(0, 0, 0, 0.7),   /* Left and top shadow */
+        -1px 1px 0 rgba(0, 0, 0, 0.7);   /* Right and bottom shadow */
+}
